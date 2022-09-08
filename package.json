@@ -21,7 +21,7 @@
     "plugins": [
       ["@semantic-release/github", {
         "assets": [
-          [ {"path": ".", "name": "logseq-plugin-merge-nested-blocks-into-one.zip" } ]
+          {"path": ".", "name": "logseq-plugin-merge-nested-blocks-into-one.zip" }
         ]
       }]
     ]
