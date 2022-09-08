@@ -15,8 +15,16 @@
     "dev": "parcel ./index.html --public-url ./",
     "build": "parcel build --public-url . --no-source-maps index.html"
   },
+  "release": {
+    "branches": ["main"]
+  },
   "devDependencies": {
-    "parcel": "2.0.0-beta.2"
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.2.3",
+    "parcel": "2.0.0-beta.2",
+    "semantic-release": "^17.4.7",
+    "typescript": "^4.4.3"
+
 },
   "dependencies": {
     "@logseq/libs": "^0.0.1-alpha.22"
