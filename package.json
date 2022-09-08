@@ -6,7 +6,10 @@
   "author": "George Guimarães",
   "license": "MIT",
   "logseq": {
-    "id": "logseg-merge-nested-blocks"
+    "id": "logseg-merge-nested-blocks",
+    "title": "Merge Nested Blocks Into One",
+    "icon": "icon.png",
+    "repository": "https://github.com/georgeguimaraes/logseq-plugin-merge-nested-blocks-into-one"
   },
   "scripts": {
     "dev": "parcel ./index.html --public-url ./",
