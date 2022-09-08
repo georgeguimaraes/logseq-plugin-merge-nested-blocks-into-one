@@ -1,4 +1,5 @@
 {
+  "private": true,
   "name": "logseq-merge-nested-blocks-into-one",
   "version": "0.0.1",
   "description": "Merge all nested blocks into one nested block with line breaks, as if it was written in document mode. This is useful if you paste a long form written article and doesn't want it to behave as multiple bullet points.",
