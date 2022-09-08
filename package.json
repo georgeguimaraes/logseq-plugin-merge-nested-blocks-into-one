@@ -20,7 +20,9 @@
     "branches": ["main"],
     "plugins": [
       ["@semantic-release/github", {
-        "assets": ["logseq-plugin-merge-nested-blocks-into-one.zip"]
+        "assets": [
+          [["."], {"name": "filezip.zip" }]
+        ]
       }]
     ]
   },
