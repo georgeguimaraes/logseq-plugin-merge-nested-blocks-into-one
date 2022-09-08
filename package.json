@@ -17,11 +17,14 @@
     "build": "parcel build --public-url . --no-source-maps index.html"
   },
   "release": {
-    "branches": ["main"]
+    "branches": ["main"],
+    "plugins": [
+      ["@semantic-release/github", {
+        "assets": ["logseq-merge-nested-blocks-into-one.zip"]
+      }]
+    ]
   },
   "devDependencies": {
-    "@semantic-release/git": "^9.0.0",
-    "@semantic-release/github": "^7.2.3",
     "parcel": "2.0.0-beta.2",
     "semantic-release": "^17.4.7",
     "typescript": "^4.4.3"
