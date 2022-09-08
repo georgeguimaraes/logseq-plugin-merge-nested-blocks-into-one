@@ -1,0 +1,21 @@
+{
+  "name": "logseq-merge-nested-blocks-into-one",
+  "version": "0.0.1",
+  "description": "Merge all nested blocks into one nested block with line breaks, as if it was written in document mode. This is useful if you paste a long form written article and doesn't want it to behave as multiple bullet points.",
+  "main": "dist/index.html",
+  "author": "George Guimarães",
+  "license": "MIT",
+  "logseq": {
+    "id": "logseg-merge-nested-blocks"
+  },
+  "scripts": {
+    "dev": "parcel ./index.html --public-url ./",
+    "build": "parcel build --public-url . --no-source-maps index.html"
+  },
+  "devDependencies": {
+    "parcel": "2.0.0-beta.2"
+},
+  "dependencies": {
+    "@logseq/libs": "^0.0.1-alpha.22"
+  }
+}
