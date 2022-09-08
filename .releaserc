@@ -1,0 +1,17 @@
+{
+  "branches": "main",
+  "plugins": [
+    [
+      "@semantic-release/github",
+        {
+          "assets": "logseq-plugin-merge-nested-blocks-into-one.zip"
+        }
+    ],
+    [
+      "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+    ],
+  ]
+}
