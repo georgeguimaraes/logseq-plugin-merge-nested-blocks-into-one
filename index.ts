@@ -9,7 +9,7 @@ async function merge_nested_blocks(blockId: string) {
   }
 
   const children = block.children as BlockEntity[];
-  let content = children.reduce(function (acc, block) { return acc + "\n\n" + block.content }, "");
+  let content = children.reduce(function(acc, block) { return acc + "\n\n" + block.content }, "");
 
   await logseq.Editor.insertBlock(block.uuid, content, {
     before: false
@@ -22,13 +22,13 @@ async function merge_nested_blocks(blockId: string) {
 
 
 logseq
-.ready(() => {
-  logseq.Editor.registerBlockContextMenuItem("Merge Nested Blocks Into One", async (e) => {
-    merge_nested_blocks(e.uuid);
-  });
+  .ready(() => {
+    logseq.Editor.registerBlockContextMenuItem("Merge Nested Blocks Into One", async (e) => {
+      merge_nested_blocks(e.uuid);
+    });
 
-  logseq.Editor.registerSlashCommand("Merge Nested Blocks Into One", async (e) => {
-    merge_nested_blocks(e.uuid);
-  });
-})
-.catch(console.error);
+    logseq.Editor.registerSlashCommand("Merge Nested Blocks Into One", async (e) => {
+      merge_nested_blocks(e.uuid);
+    });
+  })
+  .catch(console.error);
