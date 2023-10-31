@@ -9,8 +9,8 @@ If you like this plugin, please consider [staring it on GitHub](https://github.c
 To add the "Merge Nested Blocks into One" plugin to your Logseq app, follow these steps:
 
 1. Open your Logseq app and go to the Plugin Marketplace.
-3. In the search bar, type "Merge Nested Blocks into One" and press Enter.
-4. Find the plugin in the search results and click "Install" to add it to your Logseq setup.
+2. In the search bar, type "Merge Nested Blocks into One" and press Enter.
+3. Find the plugin in the search results and click "Install" to add it to your Logseq setup.
 
 ## Usage
 
