@@ -1,4 +1,4 @@
-# Merge Nested Blocks into One
+# Logseq Plugin: Merge Nested Blocks into One
 
 Easily merge all nested blocks into a single nested block with line breaks, as if it was written in document mode. This Logseq plugin is particularly useful when you have a lengthy article or content and want it to appear as a continuous node rather than multiple bullet points.
 
