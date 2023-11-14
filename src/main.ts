@@ -4,26 +4,36 @@ import {
   SettingSchemaDesc,
 } from "@logseq/libs/dist/LSPlugin.user";
 
-async function merge_nested_blocks(blockId: string) {
-  const block = await logseq.Editor.getBlock(blockId, {
+function content_from_nested_blocks(parent_block: BlockEntity): string {
+  const newline = logseq.settings!["newlineBetweenBlocks"] ? "\n\n" : "\n";
+  const children = parent_block.children as BlockEntity[];
+
+  const content = children.reduce(function(acc: string, block: BlockEntity) {
+    if (block.children?.length > 0) {
+      return acc + newline + block.content + content_from_nested_blocks(block);
+    } else {
+      return acc + newline + block.content;
+    }
+  }, "")
+
+  return content
+}
+
+async function merge_nested_blocks(parent_block_id: string) {
+  const block = await logseq.Editor.getBlock(parent_block_id, {
     includeChildren: true,
   });
   if (block === null || block.children?.length === 0) {
     return;
   }
 
-  const newline = logseq.settings!["newlineBetweenBlocks"] ? "\n\n" : "\n";
-
-  const children = block.children as BlockEntity[];
-  let content = children.reduce(function (acc, block) {
-    return acc + newline + block.content;
-  }, "");
+  const content = content_from_nested_blocks(block)
 
   await logseq.Editor.insertBlock(block.uuid, content, {
     before: false,
   });
 
-  for (let child of children) {
+  for (let child of block.children as BlockEntity[]) {
     await logseq.Editor.removeBlock(child.uuid);
   }
 }
